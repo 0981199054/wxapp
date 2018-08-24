@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view>
+  <view class="navbar">
+    <text class='city'>{{city}}</text>
+    <view>
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+    </view>
+    <image class='navbarImg' src='../../img/seek.png'></image>
+  </view>
+
+  <!--首映-->
+  <view>
+    <scroll-view scroll-y style="height:{{scrollHeight-51}}px;" class="list" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+      <view class='long'>
+        <view hidden="{{currentTab!==0}}" wx:for='{{tab1}}' class='movie' wx:key='{{index}}'>
+          <image class='movieImg' src='{{img+ item.movie_imgs[2]}}'></image>
+          <view class='introduce' data-item='{{item}}' bindtap="details">
+            <text>{{item.movie_name}}</text>
+            <text class='kind'>{{item.movie_type}}</text>
+            <text class='kind'>主演：{{item.movie_actor}}</text>
+            <text class='year'>{{item.week}}大陆上映</text>
+          </view>
+          <button wx:if='{{item.flag<0}}' class='btn'>购票</button>
+          <button wx:else class='btn lbtn'>预售</button>
+        </view>
+      </view>
+      <view class="weui-loadmore" hidden="{{!isShow}}">
+        <view class="weui-loadmore__tips">已经到底了T-T</view>
+      </view>
+    </scroll-view>
+    <loading hidden="{{hidden}}" bindchange="loadingChange">
+      加载中...
+    </loading>
+
+    <!--待映-->
+    <view hidden="{{currentTab!==1}}">
+      <view class='welcome'>近期最受欢迎</view>
+      <scroll-view class="crosswise" scroll-x>
+        <view wx:for='{{tab2}}' class='crosswiseOne' wx:key='{{index}}'>
+          <view class='crosswiseColumn'>
+            <image class='movieImg' src='{{img+ item.movie_imgs[2]}}'></image>
+            <text class='timer'>{{item.movie_name}}</text>
+            <text class='year'>{{item.movie_time}}</text>
+          </view>
+
+        </view>
+      </scroll-view>
+      <view wx:for='{{tab2}}' class='movie' wx:key='{{index}}'>
+        <image class='movieImg' src='{{img+ item.movie_imgs[2]}}'></image>
+        <view class='introduce'>
+          <text>{{item.movie_name}}</text>
+          <text class='kind'>{{item.movie_type}}</text>
+          <text class='kind'>{{item.movie_actor}}</text>
+          <text class='year'>{{item.movie_time}}</text>
+        </view>
+        <button class='btn'>购票</button>
+      </view>
+
+    </view>
+  </view>
+</view>

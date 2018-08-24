@@ -1,0 +1,67 @@
+<!--pages/details/details.wxml-->
+<view class='bg'>
+  <view class='title'>
+    <image class='titleImg' src='{{img+movie.movie_imgs[2]}}'></image>
+    <view class='titleContent'>
+      <text class='name'>{{movie.movie_name}}</text>
+      <text class='Ename'>{{movie.movie_Ename}}</text>
+      <text class='type'>{{movie.movie_type}}</text>
+      <text class='type'>{{movie.movie_user_score}}分</text>
+      <text class='type'>{{movie.movie_area +'/'+ movie.movie_duration}}</text>
+      <text class='type'>{{movie.movie_time}}大陆上映</text>
+    </view>
+  </view>
+  <view class='titleClick'>
+    <view class='clickOne'>想看</view>
+    <view class='clickOne'>评分</view>
+  </view>
+</view>
+<view class='top'></view>
+<view class='synopsis'>
+  <text>{{movie.movie_synopsis}}</text>
+</view>
+<view class='top'></view>
+<!-- 演职人员 -->
+<view>
+  <text class='text'>演职人员</text>
+  <scroll-view scroll-x class='actorList'>
+    <view wx:for='{{movie.movie_actor}}' class='column'>
+      <view class='list'>
+        <image class='actor' src='{{img+movie.movie_role[index]}}' />
+        <text class='text'>{{item}}</text>
+      </view>
+    </view>
+    <view wx:for='{{movie.movie_actor}}' class='column'>
+      <view class='list'>
+        <image class='actor' src='{{img+movie.movie_role[index]}}' />
+        <text class='text'>{{item}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='top'></view>
+  <!-- 票房 -->
+  <view>
+    <text class='text'>票房</text>
+    <view class='list'>
+      <view class='office'>{{movie.movie_office}}</view>
+      <text class='text'>累计票房</text>
+    </view>
+  </view>
+  <view class='top'></view>
+  <view>
+    <text class='text'>观众评论</text>
+    <view wx:for='{{movie.hot_comment}}'>
+      <view class='title'>
+        <image class='audienceImg' src='{{img+item.user_head}}'></image>
+        <text class='audienceName'>{{item.user_name}}</text>
+      </view>
+      <view class='content'>{{item.content}}</view>
+    </view>
+  </view>
+  <view class='list boder'>
+    <view class='office'>查看全部700条观众评论</view>
+  </view>
+  <view class='bottom'>
+  优惠购票
+  </view>
+</view>

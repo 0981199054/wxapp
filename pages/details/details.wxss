@@ -1,0 +1,142 @@
+/* pages/details/details.wxss */
+
+.bg {
+  height: 500rpx;
+  background: url('http://127.0.0.1:3333/img/bg.jpg');
+}
+
+.title {
+  display: flex;
+}
+
+.titleImg {
+  margin: 30rpx;
+  width: 260rpx;
+  height: 360rpx;
+}
+
+.titleContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+}
+
+.name {
+  color: #fff;
+  font-size: 54rpx;
+  margin-top: 10rpx;
+}
+
+.Ename {
+  color: #fff;
+  font-size: 40rpx;
+}
+
+.type {
+  color: #ccc;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+
+.top {
+  height: 20rpx;
+  background: rgb(238, 237, 237);
+}
+
+.titleClick {
+  display: flex;
+}
+
+.clickOne {
+  opacity: 0.4;
+  color: #fff;
+  margin-left: 30rpx;
+  border: 1rpx solid #fff;
+  padding: 8rpx 126rpx;
+  background: rgb(209, 204, 204);
+}
+
+.clickText {
+  color: #fff;
+}
+
+.synopsis {
+  padding: 10rpx;
+  border-top: 1rpx solid rgb(216, 216, 216);
+  border-bottom: 3rpx solid #ccc;
+  height: 300rpx;
+  font-size: 30rpx;
+  overflow: auto;
+}
+
+.actor {
+  width: 140rpx;
+  height: 190rpx;
+  display: inline-block;
+  margin-left: 12rpx;
+}
+
+.actorList {
+  height: 300rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+.text {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+
+.column {
+  display: inline-block;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10rpx;
+}
+
+.office {
+  text-align: center;
+  color: #d33a32;
+  font-size: 30rpx;
+}
+
+.audience {
+  display: flex;
+  align-items: center;
+}
+
+.audienceImg {
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+}
+
+.content {
+  margin: 20rpx 20rpx 20rpx 90rpx;
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #ccc;
+  color: #999;
+}
+
+.audienceName {
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.boder{
+  margin-bottom: 110rpx;
+}
+.bottom{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  line-height: 100rpx;
+  text-align: center;
+  background: #d33a32;
+  color: #fff;
+}

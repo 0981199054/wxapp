@@ -1,0 +1,143 @@
+/**indexwxss**/
+
+page {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  height: 76rpx;
+  display: flex;
+  background: #fff;
+  padding: 10rpx;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.navbar .item {
+  position: relative;
+  padding: 20rpx 30rpx;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.navbar .item.active {
+  color: #d33a32;
+}
+
+.navbar .item.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+  background: #d33a32;
+}
+
+.navbarImg {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.city {
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+.movie {
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #ccc;
+  height: 200rpx;
+}
+.lang{
+  height: 100vh
+}
+.introduce {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10rpx;
+}
+
+.kind {
+  font-size: 27rpx;
+  color: #999;
+  width: 400rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.year {
+  font-size: 27rpx;
+  color: #ccc;
+}
+
+.btn {
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  padding: 0;
+  margin-right: 20rpx;
+  background: #d33a32;
+  color: #fff;
+}
+
+.lbtn {
+  background: #0cf;
+}
+
+.movieImg {
+  margin-left: 10rpx;
+  width: 130rpx;
+  height: 180rpx;
+}
+
+.crosswise {
+  height: 250rpx;
+  display: flex;
+  white-space: nowrap;
+}
+
+.crosswiseOne {
+  width: 150rpx;
+  margin-left: 10rpx;
+  display: inline-block;
+}
+
+.timer {
+  font-size: 27rpx;
+  color: #999;
+  width: 150rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.crosswiseColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  line-height: 80rpx;
+  color: #999;
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.weui-loadmore {
+  width: 65%;
+  margin: 1.5em auto;
+  line-height: 1.6em;
+  font-size: 14px;
+  text-align: center;
+}
+.weui-loadmore__tips {
+  display: inline-block;
+  vertical-align: middle;
+}
